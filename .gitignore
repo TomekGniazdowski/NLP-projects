@@ -1,1 +1,7 @@
 __pycache__
+.venv
+best_bilstm.pth
+best_lstm.pth
+cc.pl.20.bin
+cc.pl.300.bin
+distilbert-base-uncased_emotions

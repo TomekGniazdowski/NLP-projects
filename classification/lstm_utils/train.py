@@ -42,9 +42,9 @@ def validate(
             preds = torch.argmax(y_pred, dim=1)
             y_true += y_batch.tolist()
             y_preds += preds.tolist()
-
+            
     f1 = f1_score(y_true=y_true, y_pred=y_preds, average='macro')
-    return loss / batch_ctr, f1
+    return (loss / batch_ctr).item(), f1
 
 
 def train(
@@ -85,8 +85,8 @@ def train(
                 'Epoch': epoch,
                 'train loss': train_loss,
                 'train f1': train_f1,
-                'validation loss': val_loss,
-                'validation f1': val_f1
+                'valid loss': val_loss,
+                'valid f1': val_f1
                 })
 
         fit_logs_train['f1'].append(train_f1)
@@ -99,22 +99,23 @@ def train(
             best_val_f1 = val_f1
             torch.save(model.state_dict(), best_model_path)
             patience_counter = 0
-            print(f"New best model on epoch {epoch}, f1={best_val_f1:.4f}")
         else:
             patience_counter += 1
             if patience_counter > patience:
                 print(f"Early stopping on epoch {epoch}")
                 break
     
-    _, ax = plt.subplots(1, 2, figsize=(12, 6))
+    _, ax = plt.subplots(1, 2, figsize=(12, 4))
     ax[0].plot(fit_logs_train['loss'], label='train')
     ax[0].plot(fit_logs_val['loss'], label='validation')
     ax[0].set_title("Loss")
+    ax[0].set_xlabel("Epoch")
     ax[0].legend()
     
     ax[1].plot(fit_logs_train['f1'], label='train')
     ax[1].plot(fit_logs_val['f1'], label='validation')
     ax[1].set_title("F1")
+    ax[1].set_xlabel("Epoch")
     ax[1].legend()
     plt.show()
     

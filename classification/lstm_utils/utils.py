@@ -5,7 +5,6 @@ from torch.nn.utils.rnn import pad_sequence
 import matplotlib.pyplot as plt
 import seaborn as sns
 import fasttext
-import fasttext.util
 
 
 def vectorize_text(X: torch.Tensor, y:  torch.Tensor, ft_model, max_num_of_words: int):
@@ -30,8 +29,8 @@ def plot_confusion_matrix(y_true: list, y_pred: list):
     cm = confusion_matrix(y_true, y_pred, normalize='true')
     cm = np.round(cm, 3)
     _, ax = plt.subplots(figsize=(6, 6))
+    sns.heatmap(cm, annot=True, ax=ax, cmap="YlGnBu")
     ax.set_title("Normalized confusion matrix")
     ax.set_xlabel("Predicted label")
     ax.set_ylabel("True label")
-    sns.heatmap(cm, annot=True, ax=ax, cmap="YlGnBu")
     plt.show()
