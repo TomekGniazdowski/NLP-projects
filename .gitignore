@@ -5,5 +5,10 @@ best_lstm.pth
 cc.pl.20.bin
 cc.pl.300.bin
 distilbert-base-uncased_emotions
+distilbert-base-uncased_emotions_adapter
+distilbert-base-uncased_emotions_freezed_-1_layers
+distilbert-base-uncased_emotions_freezed_2_layers
+distilbert-base-uncased_emotions_freezed_4_layers
+distilbert-base-uncased_emotions_freezed_6_layers
 xlm-roberta-base_panx_de
 xlm-roberta-base_panx_de_multilingual_transfer
