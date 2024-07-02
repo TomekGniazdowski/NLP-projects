@@ -1,4 +1,5 @@
 ## NLP projects
+The repository contains simple projects - basic NLP tasks, from my NLP classes from university and from self-study.
 
 ### Classification
 The repository contains a comparison of models: 
