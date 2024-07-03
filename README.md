@@ -1,7 +1,7 @@
 ## NLP projects
 
 ### Transformers encoder from scratch
-The repository contains a scratch-implementation of the transformer network encoder and its training in the emotion classification task on [emotion dataset](https://huggingface.co/datasets/dair-ai/emotion). The [bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased) tokenizer was used as a tokenizer.
+The repository contains a scratch-implementation of the transformer network encoder and its training in the emotion classification task on [emotion dataset](https://huggingface.co/datasets/dair-ai/emotion). The [bert-base-uncased](https://huggingface.co/google-bert/bert-base-uncased) tokenizer was used.
 
 
 ### Classification
