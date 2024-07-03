@@ -10,5 +10,6 @@ distilbert-base-uncased_emotions_freezed_-1_layers
 distilbert-base-uncased_emotions_freezed_2_layers
 distilbert-base-uncased_emotions_freezed_4_layers
 distilbert-base-uncased_emotions_freezed_6_layers
+transformer_from_scratch_emotions.pth
 xlm-roberta-base_panx_de
 xlm-roberta-base_panx_de_multilingual_transfer
