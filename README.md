@@ -25,7 +25,7 @@ The repository contains a dataset preprocessing and [XLM-RoBERTa](https://huggin
 
 
 ### Text to Text generation
-...
+The repository contains finetuning of the distilled Pegasus model (distill-pegasus-cnn-16-4)[https://huggingface.co/sshleifer/distill-pegasus-cnn-16-4] in the task of generating abstract summaries (on the [Samsum](https://huggingface.co/datasets/Samsung/samsum) dataset).
 
 
 ### Generation
